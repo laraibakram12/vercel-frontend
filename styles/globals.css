@@ -1,4 +1,25 @@
 body {
   margin: 0;
+  padding: 10px;
   font-family: sans-serif;
+}
+
+h1 {
+  font-size: 6vw; /* small screen */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3vw; /* bigger screen */
+  }
+}
+
+ul, p, li {
+  font-size: 4vw;
+}
+
+@media (min-width: 768px) {
+  ul, p, li {
+    font-size: 1rem;
+  }
 }

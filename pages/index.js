@@ -1,72 +1,44 @@
-
- // pages/index.js
+// pages/index.js
 import Head from 'next/head';
-import AnimatedBanner from '../features/animated_banner';
-import DarkModeToggle from '../features/dark_mode_toggle';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>BittKing – Presale Alerts, Rug Pull Radar, ROI Tools</title>
+        <title>BittKing - Presale Alerts, Rug Pull Radar, ROI Tools</title>
         <meta
           name="description"
           content="Track top crypto presales, detect scams, simulate ROI, and get real-time alerts – powered by BittKing."
         />
       </Head>
 
-      <DarkModeToggle />
+      <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6 flex flex-col items-center justify-center text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4 drop-shadow">
+          Welcome to BittKing
+        </h1>
 
-      <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6">
-        <AnimatedBanner />
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
+          What is BittKing?
+        </h2>
 
-        <section className="my-10 max-w-4xl mx-auto px-4 animate-fade-in">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4">What is BittKing?</h2>
-          <p className="mb-4">
-            BittKing is your all-in-one crypto presale hub. We help you spot the best early-stage tokens,
-            avoid rugs, and simulate potential returns.
-          </p>
+        <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto mb-6">
+          BittKing is your all-in-one crypto presale hub. We help you spot the best early-stage tokens, avoid rugs, and simulate potential returns.
+        </p>
 
-          <ul className="space-y-2 sm:space-y-3">
-            <li className="text-sm sm:text-base">🚨 <strong>Rug Pull Radar</strong> – Instant token audits</li>
-            <li>📈 <strong>ROI Simulator</strong> – Predict your profits</li>
-            <li>🔔 <strong>Presale Alerts</strong> – Get early access notifications</li>
-            <li>📊 <strong>Token Analysis</strong> – Live scores + flags</li>
-            <li>📰 <strong>Crypto Blog</strong> – Learn strategies & news</li>
-          </ul>
-        </section>
+        <ul className="text-left text-base sm:text-lg max-w-xl mx-auto space-y-2">
+          <li>🚨 <strong>Rug Pull Radar</strong> – Instant token audits</li>
+          <li>📊 <strong>ROI Simulator</strong> – Predict your profits</li>
+          <li>⏰ <strong>Presale Alerts</strong> – Get early access notifications</li>
+          <li>📈 <strong>Token Analysis</strong> – Live scores + flags</li>
+          <li>📰 <strong>Crypto Blog</strong> – Learn strategies & news</li>
+        </ul>
 
-        <section className="my-12 px-4 text-center animate-slide-up">
-          <a
-            href="https://chrome.google.com/webstore/detail"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded shadow hover:shadow-lg transition"
-          >
+        <p className="mt-6">
+          <a href="#" className="text-blue-600 underline">
             Get the Chrome Extension
           </a>
-        </section>
+        </p>
       </main>
-
-      <style jsx global>{`
-        .animate-fade-in {
-          animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .animate-slide-up {
-          animation: slideUp 1.2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-          from { transform: translateY(20px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 }
